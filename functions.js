@@ -1,5 +1,8 @@
 import { Core } from "@walletconnect/core";
 import { WalletKit } from "@reown/walletkit";
+import WalletConnect from "@walletconnect/client";
+import QRCode from "qrcode";
+
 
 document.addEventListener("DOMContentLoaded", async () => {
     // ==========================
