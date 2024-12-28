@@ -12,15 +12,36 @@ body {
     line-height: 1.6;
 }
 
-/* Navbar */
+/* Header */
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the left */
     align-items: center;
     padding: 10px 20px;
     background-color: #023D08;
     color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    max-width: 50px; /* Adjust image size */
+    margin-right: 10px; /* Add space between image and text */
+}
+
+.logo h1 {
+    font-size: 1.8em; /* Adjust text size */
+    margin-left: 10px; /* Bring "Slothbar" slightly inward */
+    color: #70b981;
+    font-weight: bold;
+}
+
+.navbar nav {
+    margin-left: auto; /* Push navigation links to the right */
 }
 
 .navbar nav a {
@@ -34,6 +55,7 @@ body {
 .navbar nav a:hover {
     color: white;
 }
+
 
 /* Hero Section */
 .hero {
