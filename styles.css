@@ -1,138 +1,54 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Hero Section */
+.hero {
+    background-color: #70b981; /* Light green background */
+    text-align: center;
+    padding: 80px 20px; /* Add padding for spacing */
 }
 
-body {
-    font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
-    background-color: #ffffff;
-    color: #000000;
-}
-
-/* Utility Classes */
-.container {
-    width: 90%;
+.hero-content {
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* Header */
-header {
-    background-color: #023D08;
-    color: #ffffff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header .container {
+.hero-layout {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; /* Even spacing for items */
+    margin-top: 30px; /* Add spacing between text and layout */
 }
 
-header .logo img {
-    max-width: 50px;
-    margin-right: 10px;
+.hero-image img {
+    max-width: 200px; /* Limit the size of the images */
+    height: auto;
+    border-radius: 10px; /* Optional rounded corners for images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
 }
 
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-
-header nav ul li {
-    margin: 0 15px;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    color: #70b981;
-    font-weight: 600;
-    transition: color 0.3s ease;
-}
-
-header nav ul li a:hover {
-    color: #ffffff;
-}
-
-/* Section Styles */
-section {
-    padding: 80px 20px;
-}
-
-.hero-content {
-    text-align: center;
-    padding: 80px 20px;
-}
-
-.placeholder-button {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.placeholder-button:hover {
-    background-color: #45a049;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-}
-
-.feature-item {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.feature-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Puzzle Game */
 .game-box {
-    margin: 20px auto;
+    background-color: #f9f9f9; /* White background for the puzzle area */
     padding: 20px;
-    background-color: #f9f9f9;
     border-radius: 10px;
     text-align: center;
     max-width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Puzzle Slots */
 .puzzle-slot {
     width: 60px;
     height: 60px;
-    border: 1px dashed #70b981;
+    border: 1px dashed #70b981; /* Use lighter green for border */
     display: inline-block;
     margin: 5px;
     border-radius: 5px;
 }
 
+/* Puzzle Pieces */
 .puzzle-piece {
     width: 60px;
     height: 60px;
     margin: 5px;
-    background-color: #023D08;
+    background-color: #023D08; /* Dark green pieces */
     border-radius: 5px;
     cursor: grab;
 }
