@@ -7,9 +7,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    line-height: 1.6;
     background-color: #ffffff;
     color: #000000;
+    line-height: 1.6;
 }
 
 /* Navbar */
@@ -39,14 +39,14 @@ body {
 .hero {
     background-color: #70b981;
     text-align: center;
-    padding: 80px 20px;
+    padding: 60px 20px;
 }
 
 .hero-layout {
     display: flex;
+    justify-content: space-around;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 .hero-image img {
@@ -107,7 +107,7 @@ body {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Learn With Hedie */
+/* Learn With Hedie Section */
 .learn-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -123,7 +123,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: #023D08;
-    font-size: 1em;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
