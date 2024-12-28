@@ -62,4 +62,89 @@ body {
     border-radius: 10px;
     text-align: center;
     max-width: 400px;
-   
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Puzzle Slots */
+.puzzle-slot {
+    width: 60px;
+    height: 60px;
+    border: 1px dashed #70b981;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+/* Puzzle Pieces */
+.puzzle-piece {
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    background-color: #023D08;
+    border-radius: 5px;
+    cursor: grab;
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.feature-item {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Learn With Hedie */
+.learn-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.grid-box {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #023D08;
+    font-size: 1em;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.grid-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-box p {
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #023D08;
+    color: white;
+}
+
+footer a {
+    color: #70b981;
+    text-decoration: none;
+}
