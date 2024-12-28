@@ -97,6 +97,15 @@ header nav ul li a:hover {
     transform: scale(1.05);
 }
 
+/* "Buy Sloth" Button Container */
+.button-container {
+    text-align: center; /* Center the buttons */
+}
+
+.placeholder-button {
+    display: inline-block; /* Ensure side-by-side layout */
+}
+
 /* QR Code */
 #qr-code-container {
     margin-top: 20px;
