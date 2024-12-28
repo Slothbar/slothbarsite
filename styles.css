@@ -73,7 +73,7 @@ header nav ul li a:hover {
 /* Hero Section */
 .hero-content {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px; /* Increased padding */
 }
 
 .wallet-button {
@@ -98,35 +98,35 @@ header nav ul li a:hover {
     text-align: center;
 }
 
+/* Section Spacing */
+section {
+    padding: 80px 20px; /* Increased padding between sections */
+}
+
 /* About Section */
 .about {
     text-align: center;
-    padding: 60px 20px;
 }
 
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    font-size: 16px;
+.placeholder-button {
+    background-color: #023D08;
     color: white;
-    background-color: #4CAF50; /* Green */
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    margin: 10px;
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: #45a049; /* Darker Green */
+.placeholder-button:hover {
+    background-color: #70b981;
 }
-
 
 /* Features Section */
 .features {
     text-align: center;
-    padding: 60px 20px;
 }
 
 .features-grid {
@@ -158,7 +158,6 @@ header nav ul li a:hover {
 /* Roadmap Section */
 .roadmap {
     text-align: center;
-    padding: 60px 20px;
 }
 
 .roadmap-image-placeholder {
@@ -175,7 +174,6 @@ header nav ul li a:hover {
 /* Learn With Hedie Section */
 .learn {
     text-align: center;
-    padding: 60px 20px;
 }
 
 .learn-grid {
@@ -233,4 +231,21 @@ header nav ul li a:hover {
     background-color: #023D08;
     border-radius: 5px;
     cursor: grab;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #023D08;
+    color: white;
+}
+
+footer a {
+    color: #70b981;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: white;
 }
