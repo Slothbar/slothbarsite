@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const puzzleSlots = document.querySelectorAll(".puzzle-slot");
     const puzzlePiecesContainer = document.getElementById("puzzle-pieces");
+    const walletSubmissionSection = document.getElementById("wallet-submission");
     const walletAddressInput = document.getElementById("wallet-address");
     const submitWalletButton = document.getElementById("submit-wallet");
     let draggedPiece = null;
+
+    // Initially hide the wallet submission section
+    walletSubmissionSection.style.display = "none";
 
     // Create Puzzle Pieces
     const totalPieces = 10;
@@ -59,7 +63,14 @@ document.addEventListener("DOMContentLoaded", () => {
         const allSlotsFilled = [...puzzleSlots].every((slot) => slot.children.length > 0);
         if (allSlotsFilled) {
             alert("Puzzle Complete!");
+            showWalletSubmission();
         }
+    }
+
+    // Show Wallet Submission Section
+    function showWalletSubmission() {
+        walletSubmissionSection.style.display = "block";
+        walletSubmissionSection.scrollIntoView({ behavior: "smooth" });
     }
 
     // Submit Wallet Address
