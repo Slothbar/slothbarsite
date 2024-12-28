@@ -12,33 +12,27 @@ body {
     color: #000000;
 }
 
-/* Utility Classes */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-/* Header */
-header {
-    background-color: #023D08;
-    color: #ffffff;
-    padding: 20px 0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-header .container {
+/* Navbar */
+.navbar {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #023D08;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header .logo img {
-    max-width: 50px;
-    margin-right: 10px;
+.navbar nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #70b981;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover {
+    color: white;
 }
 
 /* Hero Section */
@@ -68,69 +62,4 @@ header .logo img {
     border-radius: 10px;
     text-align: center;
     max-width: 400px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Puzzle Slots */
-.puzzle-slot {
-    width: 60px;
-    height: 60px;
-    border: 1px dashed #70b981;
-    display: inline-block;
-    margin: 5px;
-    border-radius: 5px;
-}
-
-/* Puzzle Pieces */
-.puzzle-piece {
-    width: 60px;
-    height: 60px;
-    margin: 5px;
-    background-color: #023D08;
-    border-radius: 5px;
-    cursor: grab;
-}
-
-/* Wallet Submission */
-.wallet-submission {
-    text-align: center;
-    margin-top: 20px;
-}
-
-.wallet-submission input {
-    padding: 10px;
-    font-size: 1em;
-    border: 1px solid #70b981;
-    border-radius: 5px;
-    width: 250px;
-}
-
-.wallet-submission button {
-    background-color: #4CAF50;
-    color: white;
-    font-size: 1em;
-    padding: 10px 20px;
-    margin-left: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
-}
-
-.wallet-submission button:hover {
-    background-color: #45a049;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #023D08;
-    color: white;
-}
-
-footer a {
-    color: #70b981;
-    text-decoration: none;
-}
+   
