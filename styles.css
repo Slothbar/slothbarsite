@@ -76,23 +76,28 @@ header nav ul li a:hover {
     padding: 80px 20px; /* Increased padding */
 }
 
-.wallet-button {
-    margin: 10px;
-    padding: 10px 20px;
+/* Green Buttons */
+.wallet-button,
+.placeholder-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
     font-size: 1em;
+    padding: 10px 20px;
+    margin: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #4CAF50; /* Green button */
-    color: white;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.wallet-button:hover {
+.wallet-button:hover,
+.placeholder-button:hover {
     background-color: #45a049; /* Darker green */
+    transform: scale(1.05);
 }
 
+/* QR Code */
 #qr-code-container {
     margin-top: 20px;
     text-align: center;
@@ -100,28 +105,12 @@ header nav ul li a:hover {
 
 /* Section Spacing */
 section {
-    padding: 80px 20px; /* Increased padding between sections */
+    padding: 80px 20px; /* Increased spacing between sections */
 }
 
 /* About Section */
 .about {
     text-align: center;
-}
-
-.placeholder-button {
-    background-color: #023D08;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1em;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 10px;
-    transition: background-color 0.3s ease;
-}
-
-.placeholder-button:hover {
-    background-color: #70b981;
 }
 
 /* Features Section */
