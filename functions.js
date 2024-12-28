@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
         piece.classList.add("puzzle-piece");
         piece.setAttribute("data-piece", i);
         piece.setAttribute("draggable", true);
-        piece.style.background = `url('sloth-puzzle.jpg') no-repeat`;
+        piece.style.background = `url('https://res.cloudinary.com/di9c1qass/image/upload/v1735391921/Untitled_300_x_200_px_c5kauy.jpg') no-repeat`;
         piece.style.backgroundSize = "300px 120px";
         piece.style.backgroundPosition = `${((i - 1) % 5) * -60}px ${Math.floor((i - 1) / 5) * -60}px`;
         puzzlePiecesContainer.appendChild(piece);
