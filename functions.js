@@ -1,32 +1,33 @@
 import { Core } from "@walletconnect/core";
 import { WalletKit } from "@reown/walletkit";
-import WalletConnect from "@walletconnect/client";
-import QRCode from "qrcode";
 
+// ==========================
+// WalletConnect Initialization
+// ==========================
+const core = new Core({
+    projectId: "c9bd95d06db97382f3b5598a74800e3f", // WalletConnect Project ID
+});
 
-document.addEventListener("DOMContentLoaded", async () => {
-    // ==========================
-    // WalletConnect Initialization
-    // ==========================
-    const core = new Core({
-        projectId: "c9bd95d06db97382f3b5598a74800e3f", // Your WalletConnect Project ID
-    });
+const metadata = {
+    name: "SlothbarSite",
+    description: "AppKit Example",
+    url: "https://reown.com/appkit", // Replace with your actual domain
+    icons: ["https://assets.reown.com/reown-profile-pic.png"],
+};
 
-    const metadata = {
-        name: "SlothbarSite",
-        description: "AppKit Example",
-        url: "https://reown.com/appkit", // Match your actual domain
-        icons: ["https://assets.reown.com/reown-profile-pic.png"],
-    };
+const walletKit = await WalletKit.init({
+    core, // Pass the shared 'core' instance
+    metadata,
+});
 
-    const walletKit = await WalletKit.init({
-        core, // Pass the shared 'core' instance
-        metadata,
-    });
-
+document.addEventListener("DOMContentLoaded", () => {
     const connectWalletButton = document.getElementById("connect-wallet");
     const gameAccess = document.getElementById("game-access");
+    const qrCodeContainer = document.getElementById("qr-code-container");
 
+    // ==========================
+    // Wallet Connection Logic
+    // ==========================
     async function connectWallet() {
         try {
             const accounts = await walletKit.connect();
@@ -40,12 +41,12 @@ document.addEventListener("DOMContentLoaded", async () => {
         }
     }
 
-    connectWalletButton.addEventListener("click", connectWallet);
-
     function enableGameAccess() {
         gameAccess.style.display = "block";
         document.querySelector(".wallet-connection").style.display = "none";
     }
+
+    connectWalletButton.addEventListener("click", connectWallet);
 
     // ==========================
     // Puzzle Game Logic
@@ -53,7 +54,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const puzzleSlots = document.querySelectorAll(".puzzle-slot");
     const puzzlePiecesContainer = document.getElementById("puzzle-pieces");
     const successMessage = document.getElementById("success-message");
-
     let draggedPiece = null;
 
     // Create Puzzle Pieces
@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", async () => {
         piece.addEventListener("touchend", (e) => {
             if (!draggedPiece) return;
 
-            // Check if dropped in a valid slot
             const rect = draggedPiece.getBoundingClientRect();
             let placedInSlot = false;
 
@@ -150,27 +149,4 @@ document.addEventListener("DOMContentLoaded", async () => {
                         draggedPiece.style.opacity = "1";
                         placedInSlot = true;
                         checkCompletion();
-                    }
-                }
-            });
-
-            if (!placedInSlot) {
-                // Reset piece to original position if not placed in a valid slot
-                draggedPiece.style.position = "relative";
-                draggedPiece.style.left = "0";
-                draggedPiece.style.top = "0";
-                draggedPiece.style.opacity = "1";
-            }
-
-            draggedPiece = null;
-        });
-    });
-
-    // Check Completion
-    function checkCompletion() {
-        const allSlotsFilled = [...puzzleSlots].every((slot) => slot.children.length > 0);
-        if (allSlotsFilled) {
-            successMessage.style.display = "block";
-        }
-    }
-});
+     
